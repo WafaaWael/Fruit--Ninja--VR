@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class bomb : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-       // StartCoroutine(Death2());
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
     private IEnumerator Death()
     {
         yield return new WaitForSeconds(2);
@@ -28,6 +17,10 @@ public class bomb : MonoBehaviour
 
             StartCoroutine(Death());
 
+        }
+        else
+        {
+            StartCoroutine(Death2());
         }
     }
     private IEnumerator Death2()
